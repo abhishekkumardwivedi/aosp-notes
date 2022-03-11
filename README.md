@@ -27,3 +27,13 @@ Usage of ```app_process``` is:
     
 app_process does ```runtime.start("com.android.internal.os.ZygoteInit", startSystemServer)```    
 
+### JNI API signature
+* https://developer.android.com/training/articles/perf-jni
+* JNI Heap view in memory profile
+
+#### JavaVM and JNIEnv
+https://developer.android.com/training/articles/perf-jni    
+* JavaVM
+* JNIEnv: JNI Apis/functions as first argument. Used for thread local storage. Can't be shared b/w threads.
+
+### Thread pool in Java and C++
