@@ -1,0 +1,19 @@
+static void getRailEnergyPowerStats(JNIEnv* env, jobject /* clazz */, jobject jrailStats) {
+    ...
+    ...
+
+}
+
+
+static const JNINativeMethod method_table[] = {
+    { "nativeWaitWakeup", "(Ljava/nio/ByteBuffer;)I", (void*)nativeWaitWakeup },
+    { "getRailEnergyPowerStats", "(Lcom/android/internal/os/RailStats;)V",
+        (void*)getRailEnergyPowerStats },
+};
+
+register_android_server_BatteryStatsService(JNIEnv *env)
+{
+    ...
+    jniRegisterNativeMethods(env, "com/android/server/am/BatteryStatsService",
+             method_table, NELEM(method_table));
+}
